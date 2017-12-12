@@ -1,0 +1,26 @@
+{
+  "name": "simplenodecontrollers",
+  "version": "1.0.0",
+  "description": "Simple Node Controllers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "simple",
+    "node",
+    "project"
+  ],
+  "author": "Ingo Guilherme Both Eyng",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.6",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.5"
+  }
+}
