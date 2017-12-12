@@ -10,11 +10,27 @@ function all() {
 }
 
 function save(task) {
-	//Pegamos o índice da última tarefa somado com um, para criar o índice da nova tarefa.
 	task._id = tasks.data[tasks.data.length - 1]._id + 1;
-
-	//Adicionamos a nova task a nossa lista de tasks
 	tasks.data.push(task);
 }
 
-module.exports = {all, save};
+function update(id, task) {
+	var index = tasks.data.findIndex(function (task) {
+		return task._id == id
+	});
+
+	tasks.data[index].title = task.title;
+	tasks.data[index].status = task.status;
+
+	return
+}
+
+function remove(id) {
+	tasks.data = tasks.data.filter(function (task) {
+		return task._id != id;
+	})
+
+	return
+}
+
+module.exports = {all, save, update, remove};
