@@ -2,22 +2,30 @@ var logger = require('morgan');
 var express = require('express');
 var consign = require('consign');
 var bodyParser = require('body-parser');
-var hbs = require('express-handlebars');
+var exphbs = require('express-handlebars');
 
 var app = express();
 
 app.use(logger('dev'));
 
 app.use(bodyParser.urlencoded({
-  extended: true
+	extended: true
 }));
 
-app.engine('.hbs', hbs({
+var hbs = exphbs.create({
 	defaultLayout: 'main',
 	extname: '.hbs',
-	layoutsDir:'views/layouts/'
-}));
+	layoutsDir:'views/layouts/',
+	partialsDir: 'views/partials/'
+});
 
+/*
+hbs.getPartials().then(function (partials) {
+    console.log(partials);
+});
+*/
+
+app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
 
 consign()

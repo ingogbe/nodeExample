@@ -1,0 +1,15 @@
+{{#each tasks}}
+	<tr>
+		<td><span>{{_id}}</span></td>
+		<td><span>{{title}}</span></td>
+	{{#if status}}
+		<td>Concluído</td>
+	{{else}}
+		<td>Não concluído</td>
+	{{/if}}
+		<td width="100px">
+			<a class="btn btn-info" href="#"><span class="fa fa-pencil"></span></a>
+			<a class="btn btn-danger" href="#"><span class="fa fa-trash"></span></a>
+		</td>
+	</tr>
+{{/each}}
