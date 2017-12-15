@@ -14,7 +14,8 @@ app.use(bodyParser.urlencoded({
 
 app.engine('.hbs', hbs({
 	defaultLayout: 'main',
-	extname: '.hbs'
+	extname: '.hbs',
+	layoutsDir:'views/layouts/'
 }));
 
 app.set('view engine', '.hbs');
