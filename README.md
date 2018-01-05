@@ -1,6 +1,8 @@
 # nodeExample #
 
-### Material utilizado até o momento (Cada um é explicado no decorrer dos tutoriais)
+### Material utilizado até o momento 
+
+Cada um é explicado no decorrer dos tutoriais.
 
 ![NPM >= v5.5.1](https://img.shields.io/badge/npm-%3E%3D%20v5.5.1-red.svg)
 ![NodeJS >= v9.3.0](https://img.shields.io/badge/node-%3E%3D%20v9.3.0-brightgreen.svg)
