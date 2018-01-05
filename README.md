@@ -1,11 +1,11 @@
 # nodeExample #
 
-### Material utilizado até o momento 
+### Material utilizado
 
-Cada um é explicado no decorrer dos tutoriais.
+Aqui está a versão de cada material utilizado até o momento. Cada um é explicado no decorrer dos tutoriais conforme são usados.
 
-![NPM >= v5.5.1](https://img.shields.io/badge/npm-%3E%3D%20v5.5.1-red.svg)
-![NodeJS >= v9.3.0](https://img.shields.io/badge/node-%3E%3D%20v9.3.0-brightgreen.svg)
+[![NPM >= v5.5.1](https://img.shields.io/badge/npm-%3E%3D%20v5.5.1-red.svg)](https://nodejs.org/en/)
+[![NodeJS >= v9.3.0](https://img.shields.io/badge/node-%3E%3D%20v9.3.0-brightgreen.svg)](https://nodejs.org/en/)
 ![express >= v4.16.2](https://img.shields.io/badge/express-%3E%3D%20v4.16.2-lightgrey.svg)
 ![morgan >= v1.9.0](https://img.shields.io/badge/morgan-%3E%3D%20v1.9.0-lightgrey.svg)
 ![nodemon >= v1.12.5](https://img.shields.io/badge/nodemon-%3E%3D%20v1.12.5-brightgreen.svg)
