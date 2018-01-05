@@ -33,4 +33,12 @@ function remove(id) {
 	return
 }
 
-module.exports = {all, save, update, remove};
+//Nosso método find
+function find (id) {
+	return tasks.data.filter(function (task) {
+		return task._id == id
+	})[0];
+}
+
+//Adicione ele aqui também
+module.exports = {all, save, update, remove, find};

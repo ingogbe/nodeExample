@@ -1,5 +1,5 @@
 module.exports = function (app) {
-	var Task = app.models.task
+	var Task = app.models.task;
 
 	return {
 		index: function (request, response) {
@@ -35,7 +35,24 @@ module.exports = function (app) {
 		destroy: function (request, response) {
 			Task.remove(request.params.id);
 			response.redirect('/');
+		},
+		create: function (request, response) {
+			response.render('createform', {
+				action: '/',
+				title: 'Nova Tarefa'
+			});
+		},
+		//Nosso método EDIT
+		edit: function (request, response) {
+			var task = Task.find(request.params.id);
+
+			response.render('createform', {
+				task: task,
+				title: 'Editar',
+				action: '/task/' + request.params.id,
+			});
 		}
+
 	}
 
 }
