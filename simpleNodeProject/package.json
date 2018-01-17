@@ -13,7 +13,7 @@
     "project"
   ],
   "author": "Ingo Guilherme Both Eyng",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "dependencies": {
     "consign": "^0.1.6",
     "express": "^4.16.2",

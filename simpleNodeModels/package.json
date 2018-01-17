@@ -1,7 +1,7 @@
 {
-  "name": "simplenodecontrollers",
+  "name": "simplenodemodels",
   "version": "1.0.0",
-  "description": "Simple Node Controllers",
+  "description": "Simple Node Models",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,10 +10,11 @@
   "keywords": [
     "simple",
     "node",
-    "project"
+    "project",
+    "model"
   ],
   "author": "Ingo Guilherme Both Eyng",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "dependencies": {
     "body-parser": "^1.18.2",
     "consign": "^0.1.6",
