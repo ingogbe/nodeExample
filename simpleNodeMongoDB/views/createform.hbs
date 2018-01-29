@@ -1,0 +1,99 @@
+{{#if modal.title}}
+	{{> modal }}
+	<script>$('#myModal').modal('toggle');</script>
+{{/if}}
+
+<div class="container">
+	<div class="page-header">
+
+		<h1>
+			<a href="/" style="text-decoration: none" data-toggle="tooltip" title="Voltar"><span class="fa fa-reply"></span> {{title}}</a>
+
+			{{#unless task}}
+			<a id="moreTask" class="btn btn-primary pull-right" style="margin-left: 5px;" href="#" data-toggle="tooltip" title="Adicionar nova tarefa">
+				<span class="fa fa-plus"></span>
+			</a>
+			<a id="clearTasks" class="btn btn-danger pull-right" style="margin-left: 5px;" href="#" data-toggle="tooltip" title="Remover todas as tarefas">
+				<span class="fa fa-trash"></span>
+			</a>
+			{{/unless}}	
+		</h1>
+	</div><!-- /.page-header -->
+	<form class="form" action="{{action}}" method="post">
+		<div id="tasks">
+			<div id="task" class="input-group" style="margin-bottom: 10px">
+				<input type="text" class="form-control" name="title" placeholder="Título" value="{{task.title}}">
+				
+				<div class="input-group-append">
+				{{#if task}}
+					<div class="input-group-text">
+						<input type="checkbox" value="{{task.status_id}}" name="status_id" {{#ifCond task.status_id '==' 2}} checked {{/ifCond}}>
+						<span style="margin-left: 10px">Concluído</span>
+					</div>
+				{{else}}
+					<button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" title="Remover" disabled>
+						<span class="fa fa-minus"></span>
+					</button>
+				{{/if}}
+				</div>
+				
+			</div>
+
+		</div>
+
+		<button class="btn btn-primary btn-block">
+			{{#if task}} <span class="fa fa-save"></span> Salvar {{else}} <span class="fa fa-plus"></span> Adicionar {{/if}}
+		</button>
+	</form>
+</div><!-- /.container -->
+
+
+{{#unless task}}
+<script>
+	document.getElementById("clearTasks").addEventListener("click", function(){
+		let tasks = document.getElementById("tasks");
+
+		while (tasks.childNodes[2]) {
+		    tasks.removeChild(tasks.childNodes[2]);
+		}
+	});
+
+	document.getElementById("moreTask").addEventListener("click", function(){
+		let div = document.createElement("div");
+		div.setAttribute("id", "task");
+		div.setAttribute("class", "input-group");
+		div.style.marginBottom = "10px";
+
+		let input = document.createElement("input");
+		input.setAttribute("class", "form-control");
+		input.setAttribute("type", "text");
+		input.setAttribute("name", "title");
+		input.setAttribute("placeholder", "Título");
+		input.setAttribute("value", "");
+		div.appendChild(input); 
+
+		let divappend = document.createElement("div");
+		divappend.setAttribute("class", "input-group-append");
+		let button = document.createElement("button");
+		let buttonspan = document.createElement("span");
+		buttonspan.setAttribute("class","fa fa-minus");
+		button.appendChild(buttonspan); 
+		button.setAttribute("id", "removeTask");
+		button.setAttribute("class", "btn btn-outline-secondary");
+		button.setAttribute("href", "#");
+		button.setAttribute("type", "button");
+		button.setAttribute("data-toggle", "tooltip");
+		button.setAttribute("title", "Remover esta tarefa");
+		divappend.appendChild(button); 
+		div.appendChild(divappend); 
+
+		button.addEventListener("click", function(){
+			document.getElementById("tasks").removeChild(button.parentElement.parentElement);
+		});
+
+		document.getElementById("tasks").appendChild(div);
+		$('[data-toggle="tooltip"]').tooltip();
+
+	});
+</script>
+{{/unless}}	

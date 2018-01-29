@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="page-header">
+		<h1>
+			<a href="/" style="text-decoration: none">Tarefas</a> 
+			<a class="btn btn-danger pull-right" style="margin-left: 5px;" href="/deleteAll" data-toggle="tooltip" title="Excluir todas as tarefas">
+				<span class="fa fa-trash"></span>
+			</a>
+			<a class="btn btn-success pull-right" style="margin-left: 5px;" href="/completeTask" data-toggle="tooltip" title="Concluir todas as tarefas">
+				<span class="fa fa-check"></span>
+			</a>
+			<a class="btn btn-primary pull-right" style="margin-left: 5px;" href="/create" data-toggle="tooltip" title="Adicionar nova tarefa">
+				<span class="fa fa-plus"></span>
+			</a>
+			<a class="btn btn-info pull-right" style="margin-left: 5px;" href="/" data-toggle="tooltip" title="Atualizar lista">
+				<span class="fa fa-refresh"></span>
+			</a>
+		</h1>
+	</div><!-- /.page-header -->
+
+	<div class="progress">
+		<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{#taskCompletePercentage tasks}}{{/taskCompletePercentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{#taskCompletePercentage tasks}}{{/taskCompletePercentage}}%" data-toggle="tooltip" title="{{#taskCompletePercentage tasks}}{{/taskCompletePercentage}}% das tarefas completas">{{#taskCompletePercentage tasks}}{{/taskCompletePercentage}}%</div>
+	</div>
+
+	<table class="table table-hover">
+		<thead>
+			<th width="60%">Titulo</th>
+			<th width="15%">Criado em</th>
+			<th width="15%" style="text-align: center">Status</th>
+			<th width="10%" style="text-align: center"><span class="fa fa-cog"></span></th>
+		</thead>
+		<tbody>
+			{{> tasklist }}
+		</tbody>
+	</table>
+</div><!-- /.container -->

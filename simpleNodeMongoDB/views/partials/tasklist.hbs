@@ -1,0 +1,42 @@
+<style>
+	.tasklistButton {
+		font-size: 20px;
+	}
+
+	.tasklistButton.edit {
+		text-decoration: none;
+		color: #2889FFFF;
+	}
+
+	.tasklistButton.delete {
+		text-decoration: none;
+		color: #FF6060FF;
+	}
+
+	.tasklistButton.complete {
+		text-decoration: none;
+		color: #57CF65FF;
+	}
+</style>
+
+
+{{#each tasks}}
+	<tr>
+		<td><span>{{title}}</span></td>
+		<td><span>{{#formatDate created_at}}{{/formatDate}}</span></td>
+		<td style="text-align: center;">
+			{{#ifCond status_id '==' 2}} Concluído {{else}} Não concluído {{/ifCond}}
+		</td>
+		<td style="text-align: center;">
+			<a class="tasklistButton edit" href="/edit/{{_id}}" data-toggle="tooltip" title="Editar">
+				<span class="fa fa-pencil"></span>
+			</a>
+			<a class="tasklistButton delete"href="/task/{{_id}}" data-toggle="tooltip" title="Excluir">
+				<span class="fa fa-trash"></span>
+			</a>
+			<a class="tasklistButton complete"href="/completeTask/{{_id}}" data-toggle="tooltip" title="Concluir">
+				<span class="fa fa-check"></span>
+			</a>
+		</td>
+	</tr>
+{{/each}}
