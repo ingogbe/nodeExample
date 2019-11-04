@@ -1,19 +1,5 @@
 # nodeExample #
 
-### Material utilizado
-
-Aqui está a versão de cada material utilizado até o momento. Cada um é explicado no decorrer dos tutoriais conforme são usados.
-
-<a href="https://nodejs.org/en/">![NPM >= v5.5.1](https://img.shields.io/badge/npm-%3E%3D%20v5.5.1-red.svg)</a>
-<a href="https://nodejs.org/en/">![NodeJS >= v9.3.0](https://img.shields.io/badge/node-%3E%3D%20v9.3.0-brightgreen.svg)</a>
-<a href="http://expressjs.com/pt-br/">![express >= v4.16.2](https://img.shields.io/badge/express-%3E%3D%20v4.16.2-lightgrey.svg)</a>
-<a href="https://www.npmjs.com/package/morgan">![morgan >= v1.9.0](https://img.shields.io/badge/morgan-%3E%3D%20v1.9.0-lightgrey.svg)</a>
-<a href="https://nodemon.io/">![nodemon >= v1.12.5](https://img.shields.io/badge/nodemon-%3E%3D%20v1.12.5-brightgreen.svg)</a>
-<a href="https://www.npmjs.com/package/consign">![consign >= v0.1.6](https://img.shields.io/badge/consign-%3E%3D%20v0.1.6-lightgrey.svg)</a>
-<a href="https://www.getpostman.com/">![postman >= v5.5.0](https://img.shields.io/badge/postman-%3E%3D%20v5.5.0-orange.svg)</a>
-<a href="https://www.npmjs.com/package/body-parser">![body-parser >= 1.18.2](https://img.shields.io/badge/body--parser-%3E%3D%20v1.18.2-lightgrey.svg)</a>
-<a href="http://handlebarsjs.com/">![express-handlebars >= 3.0.0](https://img.shields.io/badge/express--handlebars-%3E%3D%20v3.0.0-orange.svg)</a>
-
 ## Introdução
 
 Aqui você encontrará uma série de pequenos artigos abordando várias fases da criação de um projeto utilizando NodeJS, assim como diversas ferramentas, frameworks, etc que o NodeJS disponibiliza, abaixo estão listados os artigos já escritos:
